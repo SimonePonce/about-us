@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Anime Theme</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e1e2f, #2f2f45);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 3rem;
+            text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 60px; /* Space between rows and columns */
+            justify-content: center;
+            align-items: center;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .member {
+            text-align: center;
+            position: relative;
+        }
+
+        .member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            transition: border-radius 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .member:hover img {
+            border-radius: 0;
+            transform: scale(1.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .info {
+            margin-top: 10px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .member:hover .info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 10px 0;
+            cursor: pointer;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .social-icons {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+            color: #ffffff;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+            border-radius: 50%;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.3) rotate(10deg);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.6);
+            filter: brightness(1.8);
+            background: linear-gradient(135deg, #ff6ec4, #7873f5);
+            border-radius: 50%;
+            padding: 4px;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px rgba(150, 54, 228, 0.7), 0 0 20px rgba(98, 0, 255, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(51, 51, 35, 0.9), 0 0 40px rgba(107, 75, 226, 0.6);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(89, 72, 165, 0.7), 0 0 20px rgba(74, 31, 129, 0.5);
+            }
+        }
+
+
+        .about-text {
+            max-width: 900px;
+            text-align: center;
+            margin: 20px;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #dddddd;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-text:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-text">
+        Welcome to our team!
+    </div>
+    <div class="team">
+        <div class="member">
+            <img src=".jpg" alt="Simone">
+            <div class="name">Aenon Nalang</div>
+            <div class="info">
+                Aenon is our developer responsible on responsive layouts, and making sure the website works
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/search/top?q=nalang%20aenon" target="_blank">
+                        <img src="https://www.svgrepo.com/show/390294/facebook.svg" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="member">
+            <img src="yr.jpg" alt="Alex">
+            <div class="name">Yrll John Rago</div>
+            <div class="info">
+                Runlin is our creative designer and handle the atmosphere of the website.
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/RannGarr" target="_blank">
+                        <img src="https://www.svgrepo.com/show/390294/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/ranngarr/" target="_blank">
+                        <img src="https://www.svgrepo.com/show/390297/instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="member">
+            <img src="simone.jpg" alt="Maya">
+            <div class="name">Phillip Simone Ponce</div>
+            <div class="info">
+                Phillip is responsible on the context and suggestions on the website.
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/simone.ponce.79" target="_blank">
+                        <img src="https://www.svgrepo.com/show/390294/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/phillipsimone_/" target="_blank">
+                        <img src="https://www.svgrepo.com/show/390297/instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="member">
+            <img src="https://scontent.fmnl25-4.fna.fbcdn.net/v/t39.30808-1/462676072_1733089844193599_1263207902171809838_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeFkZyJGiINIKp7aM_2qPy5EM4TsXc5SsWYzhOxdzlKxZnH_epYZj4U4TPz8GY5LKcdRJiwqZowyOiKJadwqUWTM&_nc_ohc=GVqsBYJj27UQ7kNvgHoTyTh&_nc_zt=24&_nc_ht=scontent.fmnl25-4.fna&_nc_gid=ANP8H_u3CoQJ4EOuH0mrzJk&oh=00_AYB148hAOvMTvSNRJsDra1AA2T9m9Qp2pDLjY4zvXbMkRw&oe=675CC896" alt="John">
+            <div class="name">Elisha Delos Reyes</div>
+            <div class="info">
+                Elisha is responsible on the tools in developing the website.
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/elisha.delosreyes.18" target="_blank">
+                        <img src="https://www.svgrepo.com/show/390294/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/_elayshaaa/profilecard/?igsh=dm1ydDB3bXMzbzdh" target="_blank">
+                        <img src="https://www.svgrepo.com/show/390297/instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="member">
+            <img src="download.jpg" alt="Emily">
+            <div class="name">Jyan Patrick Sanchez</div>
+            <div class="info">
+                Jyan is responsible on the product to make our website better.
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/jyanpatrick.sanchez" target="_blank">
+                        <img src="https://www.svgrepo.com/show/390294/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/sand.cheese2/" target="_blank">
+                        <img src="https://www.svgrepo.com/show/390297/instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="member">
+            <img src="lex.jpg" alt="Liam">
+            <div class="name">Lex</div>
+            <div class="info">
+                Lexer handles the needs, demands on improving the website.
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61564573090580" target="_blank">
+                        <img src="https://www.svgrepo.com/show/390294/facebook.svg" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
